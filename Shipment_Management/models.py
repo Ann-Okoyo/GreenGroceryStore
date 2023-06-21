@@ -9,7 +9,7 @@ class Shipment(models.Model):
    
     
     def __str__(self):
-        return self.name
+        return self.Portname
 
 
 

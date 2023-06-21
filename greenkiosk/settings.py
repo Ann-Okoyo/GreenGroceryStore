@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'inventory',
     'seller',
     'purchases',
-    'notifications',
     'Reviews',
     'Shipment_Management',
     'Delivery_Management',

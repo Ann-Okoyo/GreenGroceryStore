@@ -2,14 +2,14 @@ from django.db import models
 
 # Create your models here.
 class Payment(models.Model):
-    amount=models.PositiveIntegerField()
-    date_of_payment=models.DateField(auto_now_add = True)
-    pending_payment=models.BooleanField(verbose_name=str)
-    receipt=models.CharField(max_length=32)
+    amount=models.DecimalField(max_digits=6,decimal_places=2)
+    date_of_payment=models.DateTimeField(auto_now_add = True)
+    pending_payment=models.DecimalField(max_digits=6,decimal_places=2)
+    receipt=models.TextField()
     payment_method=models.CharField(max_length=32)
 
 def __str__(self):
-        return self.name
+        return self.amount
 
 
 

@@ -5,7 +5,7 @@ from django.db import models
 class Vendor(models.Model):
     name=models.CharField(max_length=32)
     email=models.EmailField(verbose_name='Email Address')
-    phone_number=models.PositiveIntegerField()
+    phone_number=models.CharField(max_length=32)
     location=models.CharField(max_length=32)
     password=models.CharField(max_length=32)
 
