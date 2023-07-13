@@ -43,8 +43,10 @@ INSTALLED_APPS = [
     'Reviews',
     'Shipment_Management',
     'Delivery_Management',
+    'customer',
+    'Cart',
 ]
-
+5
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

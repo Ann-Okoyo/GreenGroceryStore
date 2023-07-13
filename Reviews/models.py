@@ -6,6 +6,8 @@ class Feedback(models.Model):
     Message=models.TextField()
     Time_and_Date=models.DateTimeField(auto_now_add = True)
     
+
+    
     def __str__(self):
         return self.Sender_Name
 
