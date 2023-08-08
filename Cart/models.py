@@ -1,6 +1,6 @@
 from django.db import models
-from django.db import models
 from inventory.models import Product
+
 class Basket(models.Model):
     products = models.ManyToManyField(Product)
     name=models.CharField(max_length=32)

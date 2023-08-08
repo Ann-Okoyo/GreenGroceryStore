@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products_list_view</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Product Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for Cart in Carts %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.total }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.shipping_cost }}</td>
+                <td>{{ product.discounts  }}</td>
+    
+               
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+
