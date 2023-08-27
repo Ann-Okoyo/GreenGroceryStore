@@ -8,6 +8,9 @@ class Basket(models.Model):
     quantity = models.IntegerField()
     shipping_cost = models.FloatField()
     discounts = models.FloatField()
+
+
+    
     def __str__(self):
         return self.name
 

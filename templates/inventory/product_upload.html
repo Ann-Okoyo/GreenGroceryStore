@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
     <title>Document</title>
 </head>
 <body>
-    <h3>Product upload Form</h3>
-    <form method="POST",class="upload_form">
+    <h3>Product Upload Form</h3>
+    <form method="POST",class="upload-form" >
+        <!-- cross site request forgery.it protects the system from hackers -->
         {%csrf_token%}
         {{form.as_p}}
-        <button type="submit">Save</button>
+        <button type="Submit">Save</button>
     </form>
 </body>
 </html>
-
-
-
 
 
 

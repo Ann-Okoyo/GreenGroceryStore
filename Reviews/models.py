@@ -12,3 +12,11 @@ class Feedback(models.Model):
         return self.Sender_Name
 
 
+
+class Meta:
+        verbose_name = 'Feedback'
+        verbose_name_plural = 'Feedback'
+
+
+
+

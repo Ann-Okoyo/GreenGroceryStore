@@ -2,22 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    {%csrf_token%}
-   
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Detail</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Card styles */
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .card h4 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .card span {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .card a {
+            text-decoration: none;
+        }
+
+        .card button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <div class="card">
-        <h4>{{products.name}}</h4>
-
-        <img src="{product.image.url}"/>
-
-        <p>{{product.description}}</p>
-        <span>{{product.price}}</span>
-       <button>add to cart</button>
+        <h4>{{ product.name }}</h4>
+        {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        {% endif %}
+        <p>{{ product.description }}</p>
+        <span>{{ product.price }}</span>
+        <a href="{% url 'shoppingcart_upload_view' %}"><button>Add to Cart</button></a>
     </div>
-   
-    
 </body>
 </html>
