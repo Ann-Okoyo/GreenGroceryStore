@@ -9,6 +9,19 @@ class Basket(models.Model):
     shipping_cost = models.FloatField()
     discounts = models.FloatField()
 
+def add_product(self,product):
+    self.product.add(product)
+    self.save()
+    return self
+
+def getTotal(self):
+    product=self.product
+    total=0
+    for product in products:
+        total+=product.price
+        return total
+
+
 
     
     def __str__(self):

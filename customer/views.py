@@ -1,6 +1,8 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render
+from customer.models import Customer
 from .forms import CustomerUploadForm
-from .models import Customer
+
+
 # Create your views here.
 def upload_customer(request):
     if request.method == 'POST':

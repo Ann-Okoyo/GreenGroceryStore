@@ -1,10 +1,7 @@
 from django import forms
 from .models import Customer
 
-
- class CustommeruploadForm(forms.ModelForm):
-
+class CustomerUploadForm(forms.ModelForm):
     class Meta:
-        models = Customer
-
-        fields =  "__all__"
+        model = Customer
+        fields = "__all__"
